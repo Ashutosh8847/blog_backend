@@ -5,7 +5,7 @@ import os
 import json
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 UPLOAD_FOLDER = 'uploads'
 BLOGS_FILE = 'blogs.json'
